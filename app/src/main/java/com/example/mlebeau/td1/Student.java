@@ -4,11 +4,29 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 public class Student {
+    private long id;
+
 
     private String nom;
     private String prenom;
     private String societe;
-    private Position position;
+    private String position;
+
+    public Student(String nomEtudiant, String prenomEtudiant, String societe, String adresse) {
+        this.nom = nomEtudiant;
+        this.prenom = prenomEtudiant;
+        this.societe = societe;
+        this.position = adresse;
+        this.id = id;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getNom() {
         return nom;
@@ -34,28 +52,18 @@ public class Student {
         this.societe = societe;
     }
 
-    public Position getPosition() {
+    public String getPosition() {
         return position;
     }
 
-    public void setPosition(Position position) {
+    public void setPosition(String position) {
         this.position = position;
     }
-
-    public Student(String nom, String prenom, String societe, Position position) {
-
-
-        this.nom = nom;
-        this.prenom = prenom;
-        this.societe = societe;
-        this.position = position;
-    }
-
-
+/*
     @Override
     public String toString(){
         NumberFormat df = new DecimalFormat("####0.0000");
         return nom + " " + "(" + df.format(position.getLat()) + "/" +  df.format(position.getLng()) + ")";
-    }
+    }*/
 
 }
